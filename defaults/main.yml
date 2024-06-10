@@ -1,0 +1,10 @@
+---
+# defaults file for firewall-management
+firewalld_rules:
+  alain-test: []
+  alain-test1:
+    - port: 25/tcp
+  alain-test2:
+    - port: 25/tcp
+    - port: 80/tcp
+    - port: 443/tcp

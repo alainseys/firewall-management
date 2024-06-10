@@ -1,0 +1,11 @@
+# handlers/main.yml
+- name: Restart firewalld
+  ansible.builtin.service:
+    name: firewalld
+    state: restarted
+  become: true
+
+- name: Check if reload is needed
+  ansible.builtin.command: echo "Reload needed"
+  register: reload_needed
+  changed_when: true
